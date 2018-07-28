@@ -68,8 +68,12 @@ public class MainActivity extends AppCompatActivity {
                 null
         );
 
-        Log.v(LOG_TAG, "Total rows in cursor: " + cursor.getCount());
-
+        try {
+            Log.v(LOG_TAG, "Total rows in cursor: " + cursor.getCount());
+        } finally {
+            cursor.close();
+        }
+        
         return cursor;
     }
 }
