@@ -34,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
         values.put(ProductEntry.COLUMN_PRODUCT_NAME, "Code: The Hidden Language of Computer Hardware and Software");
         values.put(ProductEntry.COLUMN_PRODUCT_PRICE, 19.64);
         values.put(ProductEntry.COLUMN_PRODUCT_QUANTITY, 12);
-        values.put(ProductEntry.COLUMN_PRODUCT_SUPLIER_NAME, "Microsoft Press");
-        values.put(ProductEntry.COLUMN_PRODUCT_SUPLIER_PHONE, "+79090909090");
+        values.put(ProductEntry.COLUMN_PRODUCT_SUPPLIER_NAME, "Microsoft Press");
+        values.put(ProductEntry.COLUMN_PRODUCT_SUPPLIER_PHONE, "+79090909090");
 
         long newRowId = db.insert(ProductEntry.TABLE_NAME, null, values);
 
@@ -54,8 +54,8 @@ public class MainActivity extends AppCompatActivity {
                 ProductEntry.COLUMN_PRODUCT_NAME,
                 ProductEntry.COLUMN_PRODUCT_PRICE,
                 ProductEntry.COLUMN_PRODUCT_QUANTITY,
-                ProductEntry.COLUMN_PRODUCT_SUPLIER_NAME,
-                ProductEntry.COLUMN_PRODUCT_SUPLIER_PHONE
+                ProductEntry.COLUMN_PRODUCT_SUPPLIER_NAME,
+                ProductEntry.COLUMN_PRODUCT_SUPPLIER_PHONE
         };
 
         Cursor cursor = db.query(
@@ -73,8 +73,8 @@ public class MainActivity extends AppCompatActivity {
             int nameColumnIndex = cursor.getColumnIndex(ProductEntry.COLUMN_PRODUCT_NAME);
             int priceColumnIndex = cursor.getColumnIndex(ProductEntry.COLUMN_PRODUCT_PRICE);
             int quantityColumnIndex = cursor.getColumnIndex(ProductEntry.COLUMN_PRODUCT_QUANTITY);
-            int suplierColumnIndex = cursor.getColumnIndex(ProductEntry.COLUMN_PRODUCT_SUPLIER_NAME);
-            int suplierPhoneColumnIndex = cursor.getColumnIndex(ProductEntry.COLUMN_PRODUCT_SUPLIER_PHONE);
+            int supplierColumnIndex = cursor.getColumnIndex(ProductEntry.COLUMN_PRODUCT_SUPPLIER_NAME);
+            int supplierPhoneColumnIndex = cursor.getColumnIndex(ProductEntry.COLUMN_PRODUCT_SUPPLIER_PHONE);
 
             String message;
 
@@ -83,15 +83,15 @@ public class MainActivity extends AppCompatActivity {
                 String currentName = cursor.getString(nameColumnIndex);
                 long currentPrice = cursor.getLong(priceColumnIndex);
                 int currentQuantity = cursor.getInt(quantityColumnIndex);
-                String currentSuplier = cursor.getString(suplierColumnIndex);
-                String currentSuplierPhone = cursor.getString(suplierPhoneColumnIndex);
+                String currentSupplier = cursor.getString(supplierColumnIndex);
+                String currentSupplierPhone = cursor.getString(supplierPhoneColumnIndex);
 
                 message = currentID + " - " +
                         currentName + " - " +
                         currentPrice + " - " +
                         currentQuantity + " - " +
-                        currentSuplier + " - " +
-                        currentSuplierPhone;
+                        currentSupplier + " - " +
+                        currentSupplierPhone;
 
                 Log.v(LOG_TAG, message);
             }
