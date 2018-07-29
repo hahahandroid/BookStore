@@ -69,11 +69,36 @@ public class MainActivity extends AppCompatActivity {
         );
 
         try {
-            Log.v(LOG_TAG, "Total rows in cursor: " + cursor.getCount());
+            int idColumnIndex = cursor.getColumnIndex(ProductEntry._ID);
+            int nameColumnIndex = cursor.getColumnIndex(ProductEntry.COLUMN_PRODUCT_NAME);
+            int priceColumnIndex = cursor.getColumnIndex(ProductEntry.COLUMN_PRODUCT_PRICE);
+            int quantityColumnIndex = cursor.getColumnIndex(ProductEntry.COLUMN_PRODUCT_QUANTITY);
+            int suplierColumnIndex = cursor.getColumnIndex(ProductEntry.COLUMN_PRODUCT_SUPLIER_NAME);
+            int suplierPhoneColumnIndex = cursor.getColumnIndex(ProductEntry.COLUMN_PRODUCT_SUPLIER_PHONE);
+
+            String message;
+
+            while (cursor.moveToNext()) {
+                int currentID = cursor.getInt(idColumnIndex);
+                String currentName = cursor.getString(nameColumnIndex);
+                long currentPrice = cursor.getLong(priceColumnIndex);
+                int currentQuantity = cursor.getInt(quantityColumnIndex);
+                String currentSuplier = cursor.getString(suplierColumnIndex);
+                String currentSuplierPhone = cursor.getString(suplierPhoneColumnIndex);
+
+                message = currentID + " - " +
+                        currentName + " - " +
+                        currentPrice + " - " +
+                        currentQuantity + " - " +
+                        currentSuplier + " - " +
+                        currentSuplierPhone;
+
+                Log.v(LOG_TAG, message);
+            }
+
         } finally {
             cursor.close();
         }
-        
         return cursor;
     }
 }
