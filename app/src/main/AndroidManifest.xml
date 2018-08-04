@@ -12,10 +12,18 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".EditorActivity" />
+        <activity
+            android:name=".DetailsActivity"
+            android:label="@string/details_activity_name" />
+
+        <provider
+            android:name=".data.ProductProvider"
+            android:authorities="com.example.kate.bookstore"
+            android:exported="false" />
     </application>
 
 </manifest>

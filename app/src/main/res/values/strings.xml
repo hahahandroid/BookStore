@@ -1,3 +1,64 @@
-<resources>
-    <string name="app_name">BookStore</string>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Book Store</string>
+
+    <string name="empty_view_title_text">Go add new books :3</string>
+    <string name="details_activity_name">Product details</string>
+
+    <string name="action_insert_dummy_data">Insert Dummy Data</string>
+
+    <string name="button_sale">Sale</string>
+    <string name="button_sell_one">Sell one</string>
+    <string name="button_buy_one">Buy one</string>
+    <string name="button_call_supplier">Call supplier</string>
+
+    <string name="action_edit">Edit</string>
+    <string name="action_save">Save</string>
+
+    <string name="action_delete">Delete</string>
+    <string name="delete_dialog_msg">Delete this product?</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete_product_successful">Product deleted</string>
+    <string name="delete_product_failed">Error with deleting product</string>
+
+    <string name="activity_title_new_product">Add a product</string>
+    <string name="activity_title_edit_product">Edit a product</string>
+
+    <string name="category_title">Title</string>
+
+    <string name="category_price">Price</string>
+    <string name="price_unit">$</string>
+
+    <string name="category_quantity">Quantity</string>
+    <string name="quantity_unit">item(s)</string>
+
+    <string name="category_supplier">Supplier</string>
+
+    <string name="hint_supplier_name">Name</string>
+    <string name="hint_supplier_phone">Phone</string>
+    x
+    <string name="out_of_stock">Out of stock</string>
+    <string name="in_stock"><xliff:g example="12" id="quantity">%s</xliff:g> in stock</string>
+    <string name="price">$<xliff:g example="19.10" id="price">%s</xliff:g></string>
+
+    <string name="toast_one_item_sold">One item sold</string>
+    <string name="toast_selling_failed">Selling failed</string>
+
+    <string name="toast_one_item_bought">One item bought</string>
+    <string name="toast_buying_failed">Buying failed</string>
+
+    <string name="toast_item_saved">Item saved</string>
+    <string name="toast_error_saving_item">Error saving item</string>
+
+    <string name="toast_all_filed_are_required">All fields are required</string>
+    <string name="toast_product_requires_name">Product requires a name</string>
+    <string name="toast_product_requires_valid_price">Product requires valid price</string>
+    <string name="toast_product_requires_valid_quantity">Product requires valid quantity</string>
+    <string name="toast_product_requires_supplier_name">Product requires a supplier name</string>
+    <string name="toast_product_requires_supplier_phone">Product requires a supplier phone</string>
+
+    <string name="unsaved_changes_dialog_msg">Discard your changes and quit editing?</string>
+    <string name="discard">Discard</string>
+    <string name="keep_editing">Keep Editing</string>
+
 </resources>

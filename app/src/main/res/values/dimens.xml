@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_padding">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="list_item_height">88dp</dimen>
+    <dimen name="padding_list_item">16dp</dimen>
+    <dimen name="margin_list_item">16dp</dimen>
+    <dimen name="zero_width">0dp</dimen>
+    <dimen name="little_padding">4dp</dimen>
+
+</resources>
